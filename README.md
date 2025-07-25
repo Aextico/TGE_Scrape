@@ -13,8 +13,9 @@ Install dependencies:
 
 '''bash
 pip install beautifulsoup4 requests
+'''
 
 # Usage
 '''bash
 python tge.py
-
+'''

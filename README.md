@@ -11,11 +11,11 @@ This Python script scrapes hourly electricity contract prices from the Polish Po
 
 Install dependencies:
 
-'''bash
-pip install beautifulsoup4 requests
-'''
+```bash
+  pip install beautifulsoup4 requests
+```
 
 # Usage
-'''bash
-python tge.py
-'''
+```bash
+  python tge.py
+```

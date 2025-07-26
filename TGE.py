@@ -5,8 +5,10 @@ nazwapliku = str(datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
 csvurl = 'https://tge.pl/energia-elektryczna-rdn'
 page = rq.get(csvurl)
 soup = bs(page.content, 'html.parser')
+datakontraktu = soup.find('small')
+print(datakontraktu)
 tabela = soup.find("div", class_="table-responsive wyniki-table-kontrakty-godzinowe")
-strtabela = str(tabela)
+strdopliku = '<html> \n' + str(datakontraktu) + '\n' + str(tabela) + '\n' + '</html>' 
 with open(nazwapliku + '.xml' ,'a') as f:
-    f.write(strtabela)
+    f.write(strdopliku)
 
